@@ -8,7 +8,7 @@ const productController = require('../controllers/product');
 const Util = require('../../lib/pgUtilities'),
     MW = require('../../lib/middlewares');
 
-router.get(`/api${route}/:productId/users`, Util.parallel([MW.logRequest, MW.setDB]), productController.getUsers)
+router.get(`/api${route}/:ProductId/users/:startDate/:endDate/:frequency`, Util.parallel([MW.logRequest, MW.setDB]), productController.getUsers)
 
 
 module.exports = router;
