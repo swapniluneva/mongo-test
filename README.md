@@ -7,5 +7,5 @@ Set UP:
     
 Sample APIs:
 
-http://localhost:8078/mongo-test/api/product/<ProductId>/users/<Start Date>/<End Date>/<Frequency>
+http://localhost:8078/mongo-test/api/product/PRODUCT_ID/users/<Start Date>/<End Date>/<Frequency>
 Frequency: daily, weekly OR monthly
