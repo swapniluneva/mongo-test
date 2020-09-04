@@ -14,7 +14,7 @@
     "express": "^4.17.1",
     "express-restful-helper": "0.0.3",
     "method-override": "^3.0.0",
-    "mongodb": "2.2.24",
+    "mongodb": "3.6.1",
     "morgan": "~1.9.0",
     "pug": "^2.0.3",
     "pug-render": "^2.0.0",
