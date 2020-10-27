@@ -7,19 +7,22 @@
     "dev": "node server-local.js"
   },
   "dependencies": {
-    "cookie-parser": "^1.4.4",
+    "async": "^3.2.0",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "eslint": "^5.16.0",
     "express": "^4.17.1",
     "express-restful-helper": "0.0.3",
+    "lodash": "^4.17.20",
     "method-override": "^3.0.0",
-    "mongodb": "2.2.24",
+    "mongodb": "^2.2.24",
     "morgan": "~1.9.0",
     "pug": "^2.0.3",
     "pug-render": "^2.0.0",
+    "qrcode": "^1.4.4",
     "request-promise": "^4.2.4",
     "url": "^0.11.0",
-    "winston": "3.1.0"
+    "winston": "^3.1.0"
   }
 }

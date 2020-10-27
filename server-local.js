@@ -12,9 +12,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 1
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(express.json({type: 'application/vnd.api+json'}))
+app.use(express.json({ type: 'application/vnd.api+json' }))
 app.use(cookieParser())
-app.use(expressRestfulHelper({showInfo: true, showHttp: true, showStatus: true}))
+app.use(expressRestfulHelper({ showInfo: true, showHttp: true, showStatus: true }))
 
 app.use(methodOverride('X-HTTP-Method-Override'))
 
@@ -23,11 +23,11 @@ app.set('view engine', 'pug');
 
 let routes = './app/routes/'
 fs.readdirSync(routes).forEach(file => {
-	app.use('/mongo-test', require(routes+file))
+    app.use('/', require(routes + file))
 })
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     console.log("Error Occured for ", err);
     res.locals.message = err.message;
@@ -49,4 +49,4 @@ process.on('unhandledRejection', (reason, promise) => {
 
 var port = process.env.PORT || 8078;
 app.listen(port);
-console.log("Server started at http://localhost:"+port);
+console.log("Server started at http://localhost:" + port);
