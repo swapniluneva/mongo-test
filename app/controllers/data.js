@@ -33,7 +33,17 @@ const getData = async(req, res, next) => {
 const getQRCode = async(req, res, next) => {
     try {
         const eId = req.query.eId;
-        qrcode.toBuffer(eId, {}, function(err, data) {
+        const opts = {
+            // errorCorrectionLevel: 'H',
+            // type: 'image/jpeg',
+            quality: 0.3,
+            margin: 0.1,
+            // color: {
+            //   dark:"#010599FF",
+            //   light:"#FFBF60FF"
+            // }
+        }
+        qrcode.toBuffer(eId, opts, function(err, data) {
             if (err) {
                 console.log("QR code generation failed----------", err);
                 utils.sendError(req, res, "QR code generation failed", error);
